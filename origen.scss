@@ -1,0 +1,136 @@
+//variables
+$amarillo: #F1C40F;
+$verde: #166d3b;
+$negro: black;
+$silver: azure;
+$titulo: 200px;
+$subtitulo:150px;
+/* Boosttrap scss*/
+
+//importar clases de bs en scss
+@import "bs_scss/bootstrap.scss";
+
+
+//clases
+/* clases*/
+.encabezado {background-color: $verde;
+width: 100%;}
+.cuerpo{background-color: $verde;
+    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+width: 100%;
+height: 100%;}
+.footer{background-color: $amarillo;
+width: 100%;
+border-color: $negro;
+border: 5px solid;
+margin: 5px;
+}
+.footer__p{color: $negro;
+}
+
+.encabezado__imgHeader{margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 50%;
+margin-right: 50%;
+border-radius: 50%;}
+
+.cuerpo__imgBanner{display: flex;
+margin-top: 30px;
+margin-bottom: 20px;
+margin-left: auto;
+margin-right: auto;}
+
+.section__titulo{width: $titulo;
+text-align: center;
+text-decoration: underline;}
+
+.flexNav{display: flex;
+justify-content: end;
+list-style-type: none;
+background-color: $amarillo;
+padding: 5px;}
+
+.flexNav__li{border: solid 1px $negro;
+padding: 10px;
+margin: 5px;}
+
+.li__a{color: black;}
+
+.div__header{ background-color: $amarillo;
+padding: 10px;
+margin-top: 10px;
+margin-bottom: 10px;}
+
+.adress__div{font-weight: bold;
+font-size: 20px;}
+
+.div__p{font-weight: bold;
+font-size: 20px;
+color: silver;}
+
+.centrado__p{text-align: center;
+font-size: 20px;}
+
+.form__flex{display: flex;
+display: block;
+justify-content: start;
+margin-left: 20px;}
+
+.label__form{display: flex;
+display:block;
+justify-content: start;
+margin-top: 10px;}
+
+.aside{display: flex;
+display: inline;
+width: 300px;}
+
+.nosotros__p{color:silver;
+font-size: 20px;}
+
+
+//operaciones
+/*operaciones*/
+
+.h1__titulo{width: $titulo;
+color: $amarillo;
+text-decoration: underline;
+margin-left: 50%;
+margin-right: 50%;}
+
+
+.h__subtitulo{width: $titulo - 50px;
+text-decoration: underline;
+color:$silver}
+
+.h__subtitulo2{width: $titulo - 75px;
+text-decoration: underline;
+color:$silver}
+
+@for $i from 1 to 5{
+    .htitulo-#{$i} {
+        width: $titulo - (10px * $i) }
+}
+
+//maps
+/*maps*/
+$coloresGral: (
+    /*clave: valor*/
+    header: $verde,
+    body: $verde,
+    footer: amarillo 
+);
+//maps con each
+
+@each $name-color, $bgcolor in $coloresGral {.btn-#{$name-color} {
+    background-color: $bgcolor;
+    border: $bgcolor;
+}
+}
+//condicionales
+/*condicionales*/
+$mobile: 578px;
+$tablet: 992px;
+$desktop: 1200px;
+
+
